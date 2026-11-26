@@ -311,6 +311,10 @@ import {
   apktoolResourcesPageViewResultSchema,
   apktoolResourcesSummaryViewResultSchema,
 } from "./summarySchemas/apktoolResourcesSummarySchemas.js";
+import {
+  artifactExtractionPageViewResultSchema,
+  artifactExtractionSummaryViewResultSchema,
+} from "./summarySchemas/artifactExtractionSummarySchemas.js";
 import { webNetworkCaptureSummaryViewResultSchema } from "./summarySchemas/webNetworkCaptureSummarySchema.js";
 import {
   webSourceLocationMatchesViewResultSchema,
@@ -400,6 +404,8 @@ export {
   webExecutionSummaryViewResultSchema,
   apktoolResourcesPageViewResultSchema,
   apktoolResourcesSummaryViewResultSchema,
+  artifactExtractionPageViewResultSchema,
+  artifactExtractionSummaryViewResultSchema,
   webNetworkCaptureSummaryViewResultSchema,
   webSourceLocationMatchesViewResultSchema,
   webSourceLocationSummaryViewResultSchema,
@@ -710,6 +716,7 @@ export const analysisViewResultSchema = z.discriminatedUnion("kind", [
   webPagePageViewResultSchema,
   webExecutionPageViewResultSchema,
   apktoolResourcesPageViewResultSchema,
+  artifactExtractionPageViewResultSchema,
   sourceToBundlePageViewResultSchema,
   endpointComparisonPageViewResultSchema,
   apiContractPageViewResultSchema,
@@ -824,6 +831,7 @@ export const analysisViewResultSchema = z.discriminatedUnion("kind", [
     webExecutionSummaryViewResultSchema,
     apktoolResourcesSummaryViewResultSchema,
     androidReferencesSummaryViewResultSchema,
+    artifactExtractionSummaryViewResultSchema,
     nugetNupkgSummaryViewResultSchema,
   ]),
   z.strictObject({
